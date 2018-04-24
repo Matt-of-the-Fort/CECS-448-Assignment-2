@@ -1,10 +1,23 @@
-/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    #body-styling {
+        background-color: #4CAF50;
+        font-family: 'Bree Serif', serif;
+    }
+      
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
     }
+    
+    .column-content {
+      padding: 15px 0px 3px 0px;
+      text-align: center;
+      color: white;
+      background-color: #282828;
+      border: 2px solid white;
+    }
    
-    /* Add a gray background color and some padding to the footer */
+    /* Add a gray background color and some padding to the footer #d1d8d1*/
     footer {
       background-color: #f2f2f2;
       padding: 25px;
