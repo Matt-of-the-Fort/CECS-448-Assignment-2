@@ -43,10 +43,24 @@
 }
 
 .card {
-    height: 400px;
+    height: 450px;
     width: 300px;
 }
 
-.card-body {
-    background-image: url(./white_marble_2.jpg)
+#card-body {
+    background-image: url(./white_marble_2.jpg);
+    padding: 5px;
+}
+
+#padded-right {
+    padding-right: 25px;
+}
+
+#padded-left {
+    padding-left: 25px;
+}
+
+.shop-button {
+    margin-top: 0.4em;
+    padding-right: 20px;
 }
