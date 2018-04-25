@@ -1,10 +1,137 @@
 <!DOCTYPE html>
-<html
+<html>
     <head>
+        <title>Oasis Gate</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <style>
+            .zoom {
+                transition: transform .2s;
+            }
+
+            .zoom:hover {
+                transform: scale(1.2);
+            }
+        </style>
     </head>
     <body>
-        <h1>Here is a header.</h1>
-        <p>Here is some body text.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg" class="img-thumbnail zoom" alt="" onclick="javascript:oasisImg1()">
+                    <img src="http://www.gatesnfences.com/sitebuilder/images/DSC075452-375x484.jpg" class="img-thumbnail zoom" alt="" onclick="javascript:oasisImg2()">
+                </div>
+                <div class="col-sm-4">
+                    <img id="productImage" class="img-fluid" src="http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg" alt="">
+                </div>
+                <script>
+                    function oasisImg1() {
+                        document.getElementById("productImage").src = "http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg";
+                    }
+                    function oasisImg2() {
+                        document.getElementById("productImage").src = "http://www.gatesnfences.com/sitebuilder/images/DSC075452-375x484.jpg";
+                    }
+                </script>
+                <div class="col-sm-6">
+                    <h3>Oasis Gate</h3>
+                    <h4 id="price">Price: $1,620</h4>
+                    <button type="button" class="btn btn-outline-primary m-2" onclick="oasisSg()">Walk Gate - Oasis -- Single</button>
+                    <button type="button" class="btn btn-outline-primary m-2" onclick="oasisDb()">Walk Gate - Oasis -- Double</button>
+                    <button type="button" class="btn btn-outline-primary m-2" onclick="plexiSg()">Privacy Panel Plexiglas Single</button>
+                    <button type="button" class="btn btn-outline-primary m-2" onclick="plexiDb()">Privacy Panel Plexiglas Double</button>
+                    <button type="button" class="btn btn-outline-primary m-2" onclick="krinkSg()">Privacy Panel Krinklglas Single</button>
+                    <button type="button" class="btn btn-outline-primary m-2" onclick="krinkDb()">Privacy Panel Krinklglas Double</button>
+                    <script>
+                        function oasisSg() {
+                            document.getElementById("price").innerHTML = "Price: $1,620";
+                        }
+                        function oasisDb() {
+                            document.getElementById("price").innerHTML = "Price: $3,240";
+                        }
+                        function plexiSg() {
+                            document.getElementById("price").innerHTML = "Price: $336";
+                        }
+                        function plexiDb() {
+                            document.getElementById("price").innerHTML = "Price: $648";
+                        }
+                        function krinkSg() {
+                            document.getElementById("price").innerHTML = "Price: $504";
+                        }
+                        function krinkDb() {
+                            document.getElementById("price").innerHTML = "Price: $960";
+                        }
+                    </script>
+                    <div class="row">
+                        <div class="input-group input-group-sm mb-3 col-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Qty:</span>
+                            </div>
+                            <select class="form-control" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+                        </div>
+                        <div class="input-group input-group-sm mb-3 col-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Color:</span>
+                            </div>
+                            <select class="form-control" id="sel1">
+                                <option>Red</option>
+                                <option>Red-Orange</option>
+                                <option>Clear</option>
+                                <option>Royal Blue</option>
+                                <option>Blue</option>
+                                <option>Violet</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <h5>Total: $</h5>
+                        </div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h2>Product Description</h2>
+                <div class="col-10">
+                    <p>This Gate the outer frame is 2" X 2" with the hinge side been .187 and the rest .125, Top and bottom horizontal ( arch ) 
+                        are 1" X 2" X .125, the pickets are 3/4" X 3/4" x .125 with slip in collars, bottom and crown scroll work is solid plate 3/8 
+                        X 3/4", Lock box and locks are optional our standard lock that is included is a gravity Gate latch which is Stainless 
+                        steel. Posts depends on what's needed if is to be atached to an existing structure a 2" X 2" can we will provide the 
+                        correct size and hardware for you.</p>
+                    <p>The backing Material use on this particular gate is Krinklglas.
+                        The newest and most versatile stained glass applications are not really glass at all, but rather a Fiberglass Reinforced 
+                        Plastic (FRP) Copolymer Panel known as Krinklglas®.
+                        Privacy and Security: Krinklglas® translucent panels let light through without glare, yet provide a special privacy and 
+                        extra visual protection not available with transparent materials.
+                        Low Maintenance: Chemical and abrasion resistant to most acids, mild alkalies and petroleum-based solvents, 
+                        Krinklglas® can be used in most corrosive environments. Its textured surfaces "hide" scratches and marks from 
+                        knives and other sharp objects; the panels are easily cleaned of dirt and graffiti using ordinary cleaners or common 
+                        solvents.</p>
+                    <p>Warranty: Krinklglas panels are custom made with quality materials and UV inhibitors. Panels are warranted against 
+                        manufacturing defects. Product is warranted against severe color fading for five years from date of purchase.
+                        For security and privacy in your home, choose an attractive Custom Privacy driveway gate from the wide selection 
+                        available on our web site. A driveway gate is not only a great source of privacy and security, but it adds loads of curb 
+                        appeal to your home. The exterior impression of your property becomes more authoritative and majestic with a gate. If 
+                        you have one-of-a-kind landscaping, then this gate will make one of a kind Privacy Driveway Gate.</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
