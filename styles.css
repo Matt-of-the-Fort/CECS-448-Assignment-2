@@ -1,5 +1,6 @@
     #body-styling {
-        background-color: #4CAF50;
+        /*background-color: #f9f9f9;*/
+        background-image: url(./noisy-texture.png);
         font-family: 'Bree Serif', serif;
     }
       
@@ -12,9 +13,11 @@
     .column-content {
       padding: 15px 0px 3px 0px;
       text-align: center;
-      color: white;
-      background-color: #282828;
-      border: 2px solid white;
+      color: black;
+      /*background-color: #282828;*/
+      background-image: url(./noisy-texture.png);
+      /*border-radius: 25px;*/
+      /*border: 2px solid white;*/
     }
    
     /* Add a gray background color and some padding to the footer #d1d8d1*/
@@ -22,3 +25,28 @@
       background-color: #f2f2f2;
       padding: 25px;
     }
+
+.image-content {
+    width:          256px;
+    height:         360px;
+    border-radius:  10px;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 25px;
+    color: black;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+}
+
+.card-body {
+    background-image: url(./white_marble_2.jpg)
+}
