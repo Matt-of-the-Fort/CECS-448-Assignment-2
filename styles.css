@@ -1,6 +1,6 @@
 #body-styling {
     /*background-color: #f9f9f9;*/
-    background-image: url(./noisy-texture.png);
+    background-image: url(assets/noisy-texture.png);
     font-family: 'Bree Serif', serif;
 }
   
@@ -15,7 +15,7 @@
   text-align: center;
   color: black;
   /*background-color: #282828;*/
-  background-image: url(./assets/noisy-texture.png);
+  background-image: url(assets/noisy-texture.png);
   /*border-radius: 25px;*/
   /*border: 2px solid white;*/
 }
@@ -56,7 +56,7 @@ footer {
 }
 
 #card-body {
-    background-image: url(./white_marble_2.jpg);
+    background-image: url(assets/white_marble_2.jpg);
     padding: 5px;
 }
 
@@ -71,4 +71,17 @@ footer {
 .shop-button {
     margin-top: 0.4em;
     padding-right: 20px;
+}
+
+.btn-unavailable,
+.btn-unavailable:focus,
+.btn-unavailable:active,
+.btn-unavailable:hover {
+    color: white;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.card-title {
+    height: 30px;
 }
