@@ -1,6 +1,6 @@
 #body-styling {
     /*background-color: #f9f9f9;*/
-    background-image: url(./noisy-texture.png);
+    background-image: url(assets/noisy-texture.png);
     font-family: 'Bree Serif', serif;
 }
   
@@ -15,7 +15,7 @@
   text-align: center;
   color: black;
   /*background-color: #282828;*/
-  background-image: url(./assets/noisy-texture.png);
+  background-image: url(assets/noisy-texture.png);
   /*border-radius: 25px;*/
   /*border: 2px solid white;*/
 }
@@ -48,7 +48,7 @@ footer {
 }
 
 #card-body {
-    background-image: url(./white_marble_2.jpg);
+    background-image: url(assets/white_marble_2.jpg);
     padding: 5px;
 }
 
