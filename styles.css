@@ -35,6 +35,14 @@ footer {
   /*background-color: #0A1C28;*/
   background-color: #343A40;
   padding: 25px;
+}   
+
+.construction{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-block-start: 10%;
+    padding-block-end: 25%;
 }
 
 #footer-link {
