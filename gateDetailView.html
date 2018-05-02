@@ -7,24 +7,70 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
         <style>
+            body {
+                color: #211E2B;
+            }
             .zoom {
                 transition: transform .2s;
             }
 
             .zoom:hover {
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
+            
+            .imageColor {
+                width: 20px;
+            }
+            
+            .btn {
+                transition: transform .1s;
+                transform: scale(1);
+            }
+            
+            .btn:hover {
+                transition: transform .2s;
+                transform: scale(1.1);
+            }
+            
+            #productImage {
+                height: 400px;
+                width: 90%;
+            }
+            
+            .btn-outline-primary {
+                color: #BD7248;
+                border: solid 1px #BD7248;
+                font-size: 0.85em;
+            }
+            
+            .btn-outline-primary:hover, .btn-outline-primary:active, .btn-primary {
+                background-color: #BD7248 !important;
+                border: solid 1px #BD7248 !important;
+            }
+            
+            .form-control:focus {
+                border: solid 1px #BD7248;
+            }
+            
+            .btn-outline-primary:active:focus, .btn-outline-primary:focus, .form-control:focus, .btn-primary:active:focus {
+                box-shadow: 0 0 0 0 !important;
+            }
+            
+            .btn-shadow, .btn-primary:focus {
+                box-shadow: 0 0 0 0.2rem rgba(189,114,72,.4) !important;
+            }
+            
         </style>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
-                    <img src="http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg" class="img-thumbnail zoom" alt="" onclick="javascript:oasisImg1()">
-                    <img src="http://www.gatesnfences.com/sitebuilder/images/DSC075452-375x484.jpg" class="img-thumbnail zoom" alt="" onclick="javascript:oasisImg2()">
+                <div class="col-sm-1">
+                    <img src="http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg" class="img-thumbnail zoom m-2" alt="Single Gate" onclick="javascript:oasisImg1()">
+                    <img src="http://www.gatesnfences.com/sitebuilder/images/DSC075452-375x484.jpg" class="img-thumbnail zoom m-2" alt="Double Gate" onclick="javascript:oasisImg2()">
                 </div>
                 <div class="col-sm-4">
-                    <img id="productImage" class="img-fluid" src="http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg" alt="">
+                    <img id="productImage" class="img-fluid m-2" src="http://www.gatesnfences.com/sitebuilder/images/DSC075462-395x465.jpg" alt="Gate">
                 </div>
                 <script>
                     function oasisImg1() {
@@ -34,41 +80,101 @@
                         document.getElementById("productImage").src = "http://www.gatesnfences.com/sitebuilder/images/DSC075452-375x484.jpg";
                     }
                 </script>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                     <h3>Oasis Gate</h3>
-                    <h4 id="price">Price: $1,620</h4>
-                    <button type="button" class="btn btn-outline-primary m-2" onclick="oasisSg()">Walk Gate - Oasis -- Single</button>
-                    <button type="button" class="btn btn-outline-primary m-2" onclick="oasisDb()">Walk Gate - Oasis -- Double</button>
-                    <button type="button" class="btn btn-outline-primary m-2" onclick="plexiSg()">Privacy Panel Plexiglas Single</button>
-                    <button type="button" class="btn btn-outline-primary m-2" onclick="plexiDb()">Privacy Panel Plexiglas Double</button>
-                    <button type="button" class="btn btn-outline-primary m-2" onclick="krinkSg()">Privacy Panel Krinklglas Single</button>
-                    <button type="button" class="btn btn-outline-primary m-2" onclick="krinkDb()">Privacy Panel Krinklglas Double</button>
+                    <hr>
+                    <h5>Price: $<span id="price" class="h3">1620</span> plus shipping</h5>
+                    <button id="Gsingle" type="button" class="btn btn-outline-primary m-2" onclick="oasisSg()">Walk Gate - Oasis -- Single</button>
+                    <button id="Gdouble" type="button" class="btn btn-outline-primary m-2" onclick="oasisDb()">Walk Gate - Oasis -- Double</button>
+                    <button id="Psingle" type="button" class="btn btn-outline-primary m-2" onclick="plexiSg()">Privacy Panel Plexiglas Single</button>
+                    <button id="Pdouble" type="button" class="btn btn-outline-primary m-2" onclick="plexiDb()">Privacy Panel Plexiglas Double</button>
+                    <button id="Ksingle" type="button" class="btn btn-outline-primary m-2" onclick="krinkSg()">Privacy Panel Krinklglas Single</button>
+                    <button id="Kdouble" type="button" class="btn btn-outline-primary m-2" onclick="krinkDb()">Privacy Panel Krinklglas Double</button>
                     <script>
+                        var prevColor = "null";
+                        var prevGate = "null";
+                        
                         function oasisSg() {
-                            document.getElementById("price").innerHTML = "Price: $1,620";
+                            document.getElementById("price").innerHTML = "1620";
+                            total(1620);
+                            oasisImg1();
+                            gate("Gsingle");
                         }
                         function oasisDb() {
-                            document.getElementById("price").innerHTML = "Price: $3,240";
+                            document.getElementById("price").innerHTML = "3240";
+                            total(3240);
+                            oasisImg2();
+                            gate("Gdouble");
                         }
                         function plexiSg() {
-                            document.getElementById("price").innerHTML = "Price: $336";
+                            document.getElementById("price").innerHTML = "336";
+                            total(336);
+                            gate("Psingle");
                         }
                         function plexiDb() {
-                            document.getElementById("price").innerHTML = "Price: $648";
+                            document.getElementById("price").innerHTML = "648";
+                            total(648);
+                            gate("Pdouble");
                         }
                         function krinkSg() {
-                            document.getElementById("price").innerHTML = "Price: $504";
+                            document.getElementById("price").innerHTML = "504";
+                            total(504);
+                            gate("Ksingle");
                         }
                         function krinkDb() {
-                            document.getElementById("price").innerHTML = "Price: $960";
+                            document.getElementById("price").innerHTML = "960";
+                            total(960);
+                            gate("Kdouble");
+                        }
+                        function total() {
+                            var selected = document.getElementById("sel1");
+                            document.getElementById("total").innerHTML = (selected.options[selected.selectedIndex].value * document.getElementById("price").innerHTML);
+                        }
+                        function color(color) {
+                            document.getElementById("color").innerHTML = color;
+                            document.getElementById(color).className = "btn btn-primary btn-shadow p-1";
+                            if(prevColor != "null" || prevColor == color)
+                                document.getElementById(prevColor).className = "btn btn-outline-primary p-1";
+                            prevColor = color;
+                        }
+                        function gate(gate) {
+                            document.getElementById(gate).className = "btn btn-primary m-2 btn-shadow";
+                            if(prevGate != "null" || prevGate == gate)
+                                document.getElementById(prevGate).className = "btn btn-outline-primary m-2";
+                            prevGate = gate;
+                        }
+                        function add() {
+                            if(prevColor != "null" && prevGate != "null") {
+                                document.getElementById("added").innerHTML = "Added succesfully!";
+                            }
+                            else {
+                                document.getElementById("added").innerHTML = "Choose a type and color";
+                            }
                         }
                     </script>
                     <div class="row">
-                        <div class="input-group input-group-sm mb-3 col-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-sm">Qty:</span>
-                            </div>
-                            <select class="form-control" id="sel1">
+                        <div class="mb-3 col-12">
+                            <button type="button" id="Blue" class="btn btn-outline-primary p-1" title="Blue" onclick="color('Blue')"><img src="ColorsGate/blue.jpg" class="imageColor"></button>
+                            <button type="button" id="Blue-Green" class="btn btn-outline-primary p-1" title="Blue-Green" onclick="color('Blue-Green')"><img src="ColorsGate/blueGreen.jpg" class="imageColor"></button>
+                            <button type="button" id="Brass" class="btn btn-outline-primary p-1" title="Brass" onclick="color('Brass')"><img src="ColorsGate/brass.jpg" class="imageColor"></button>
+                            <button type="button" id="Clear" class="btn btn-outline-primary p-1" title="Clear" onclick="color('Clear')"><img src="ColorsGate/clear.jpg" class="imageColor"></button>
+                            <button type="button" id="Copper" class="btn btn-outline-primary p-1" title="Copper" onclick="color('Copper')"><img src="ColorsGate/copper.jpg" class="imageColor"></button>
+                            <button type="button" id="Green" class="btn btn-outline-primary p-1" title="Green" onclick="color('Green')"><img src="ColorsGate/green.jpg" class="imageColor"></button>
+                            <button type="button" id="Mauve" class="btn btn-outline-primary p-1" title="Mauve" onclick="color('Mauve')"><img src="ColorsGate/mauve.jpg" class="imageColor"></button>
+                            <button type="button" id="MossJade" class="btn btn-outline-primary p-1" title="MossJade" onclick="color('MossJade')"><img src="ColorsGate/mossJade.jpg" class="imageColor"></button>
+                            <button type="button" id="Orange" class="btn btn-outline-primary p-1" title="Orange" onclick="color('Orange')"><img src="ColorsGate/orange.jpg" class="imageColor"></button>
+                            <button type="button" id="Peach" class="btn btn-outline-primary p-1" title="Peach" onclick="color('Peach')"><img src="ColorsGate/peach.jpg" class="imageColor"></button>
+                            <button type="button" id="Pink" class="btn btn-outline-primary p-1" title="Pink" onclick="color('Pink')"><img src="ColorsGate/pink.jpg" class="imageColor"></button>
+                            <button type="button" id="Red" class="btn btn-outline-primary p-1" title="Red" onclick="color('Red')"><img src="ColorsGate/red.jpg" class="imageColor"></button>
+                            <button type="button" id="Red-Orange" class="btn btn-outline-primary p-1" title="Red-Orange" onclick="color('Red-Orange')"><img src="ColorsGate/redOrange.jpg" class="imageColor"></button>
+                            <button type="button" id="Royal Blue" class="btn btn-outline-primary p-1" title="Royal Blue" onclick="color('Royal Blue')"><img src="ColorsGate/royalBlue.jpg" class="imageColor"></button>
+                            <button type="button" id="Violet" class="btn btn-outline-primary p-1" title="Violet" onclick="color('Violet')"><img src="ColorsGate/violet.jpg" class="imageColor"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <h6>Qty: </h6>
+                            <select class="form-control" id="sel1" onchange="total()">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -80,24 +186,15 @@
                                 <option>9</option>
                             </select>
                         </div>
-                        <div class="input-group input-group-sm mb-3 col-4">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-sm">Color:</span>
-                            </div>
-                            <select class="form-control" id="sel1">
-                                <option>Red</option>
-                                <option>Red-Orange</option>
-                                <option>Clear</option>
-                                <option>Royal Blue</option>
-                                <option>Blue</option>
-                                <option>Violet</option>
-                            </select>
+                        <div class="col-3">
+                            <h6>Color: <h5 id="color"></h5></h6>
                         </div>
                         <div class="col-3">
-                            <h5>Total: $</h5>
+                            <h6>Total: $<span id="total" class="h4"></span></h6>
                         </div>
-                        <div class="col-2">
-                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-primary" onclick="add()">Add to Cart</button>
+                            <h6 id="added" class="p-2"></h6>
                         </div>
                     </div>
                 </div>
@@ -105,8 +202,9 @@
         </div>
         <div class="container">
             <div class="row">
-                <h2>Product Description</h2>
+                <div class="col-1"></div>
                 <div class="col-10">
+                    <h2>Product Description</h2>
                     <p>This Gate the outer frame is 2" X 2" with the hinge side been .187 and the rest .125, Top and bottom horizontal ( arch ) 
                         are 1" X 2" X .125, the pickets are 3/4" X 3/4" x .125 with slip in collars, bottom and crown scroll work is solid plate 3/8 
                         X 3/4", Lock box and locks are optional our standard lock that is included is a gravity Gate latch which is Stainless 
@@ -127,7 +225,27 @@
                         available on our web site. A driveway gate is not only a great source of privacy and security, but it adds loads of curb 
                         appeal to your home. The exterior impression of your property becomes more authoritative and majestic with a gate. If 
                         you have one-of-a-kind landscaping, then this gate will make one of a kind Privacy Driveway Gate.</p>
+                    <p>We recommend Aluminum as the Metal for your Garden Gates or Walk Through Gates. Aluminum has many features - 
+                        Aluminum will NEVER RUST!  Authentic Look of Cast Iron - Without the bulky weight and maintenance. Strong Solid 
+                        Structural Grade ½” to ¾” Cast Aluminum Ornamentation NOT cheap hollow tubing like most others.</p>
+                    <p>Just as a well-chosen front door delivers a message about the homeowner, garden gates convey a lot of information as 
+                        well. With garden gates, you have the opportunity to make a statement. For instance, a bright eye-catching color 
+                        demands attention. Garden gates made of pickets or wrought iron reflect a certain openness and willingness to share, 
+                        say, giving passersby a peek at an outdoor water fountain just on the other side. Solid garden gates, conversely, indicate 
+                        a desire for privacy and security that is why we offer all the different styles.</p>
+                    <p>We offer top quality garden gates that will create a charming and beautiful facade to your garden and will instantly 
+                        upgrade it. You can choose between elegant wrought iron gates with a classic look or opt  for a traditional or modern design.</p>
+                    <p>A good fence relies on hinges, latches and other hardware to keep it working in a smooth and orderly fashion. With so 
+                        many options available, getting the right piece of hardware for your fence is key to longevity and overall performance, we 
+                        only use the best material available our hinges for the garden gates are made of aluminum and they will be painted with 
+                        the gate ( powder coat oven baked ) the pin, springs, screws and if you select the gravity gate latch are all STAINLESS STEEL</p>
+                    <p>Ornamental fencing adds unique decor with a personalized touch while simultaneously providing protection for either 
+                        your home or business. OUR Iron Gates are manufactured from steel, or from extruded Aluminum. They are designed to 
+                        provide years of maintenance-free operation. Gate hinges and hardware have been engineered to withstand the rigors of 
+                        manual or automatic gate opening. A powder-coat finish provides superior corrosion resistance, while also making the 
+                        gate virtually maintenance-free. Choose from a complete selection of styles, options, and colors available from no other manufacturer</p>
                 </div>
+                <div class="col-1"></div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
