@@ -1,6 +1,6 @@
 #body-styling {
-    /*background-color: #f9f9f9;*/
-    background-image: url(./noisy-texture.png);
+    background-color: #41848F;
+    /*background-image: url(./noisy-texture.png);*/
     font-family: 'Bree Serif', serif;
 }
   
@@ -10,11 +10,21 @@
   border-radius: 0;
 }
 
+.items {
+  width: 70%;
+  margin: 0em 12em 0em 13em;
+  background-color: #72A7A3;
+}
+
+#col-centered{
+    padding-left: 33px;
+}
+
 .column-content {
   padding: 15px 0px 3px 0px;
   text-align: center;
   color: black;
-  /*background-color: #282828;*/
+  /*background-color: #72A7A3;*/
   background-image: url(./assets/noisy-texture.png);
   /*border-radius: 25px;*/
   /*border: 2px solid white;*/
@@ -22,8 +32,13 @@
 
 /* Add a gray background color and some padding to the footer #d1d8d1*/
 footer {
-  background-color: #f2f2f2;
+  /*background-color: #0A1C28;*/
+  background-color: #343A40;
   padding: 25px;
+}
+
+#footer-link {
+  margin: 0px 10px;
 }
 
 .image-content {
@@ -48,7 +63,8 @@ footer {
 }
 
 #card-body {
-    background-image: url(./white_marble_2.jpg);
+    /*background-image: url(./white_marble_2.jpg);*/
+    background-color: #FFFFFF;
     padding: 5px;
 }
 
