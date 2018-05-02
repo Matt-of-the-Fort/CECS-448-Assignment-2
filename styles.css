@@ -1,5 +1,5 @@
 #body-styling {
-    background-color: #41848F;
+    background-color: #bdd5ea;
     /*background-image: url(./noisy-texture.png);*/
     font-family: 'Bree Serif', serif;
 }
@@ -10,9 +10,9 @@
 }
 
 .items {
-  width: 80%;
-  margin: 0 10%;
-  background-color: #72A7A3;
+    width: 80%;
+    margin: 0 10%;
+    background-color: #ffffff;
 }
 
 #col-centered{
@@ -31,9 +31,9 @@
 
 /* Add a gray background color and some padding to the footer #d1d8d1*/
 footer {
-  /*background-color: #0A1C28;*/
-  background-color: #343A40;
-  padding: 25px;
+    /*background-color: #0A1C28;*/
+    background-color: #577399;
+    padding: 25px;
 }   
 
 .construction{
@@ -68,10 +68,11 @@ footer {
 .card {
     height: 450px;
     width: 300px;
+    border: 1px solid #D0D0D0 !important;
 }
 
 #card-body {
-    /*background-image: url(./white_marble_2.jpg);*/
+    background-image: url(./assets/white_marble_2.jpg);
     background-color: #FFFFFF;
     padding: 5px;
 }
