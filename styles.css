@@ -6,13 +6,12 @@
   
 /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 .navbar {
-  margin-bottom: 50px;
   border-radius: 0;
 }
 
 .items {
-  width: 70%;
-  margin: 0em 12em 0em 13em;
+  width: 80%;
+  margin: 0 10%;
   background-color: #72A7A3;
 }
 
@@ -101,4 +100,8 @@ footer {
 
 .card-title {
     height: 30px;
+}
+
+.card {
+    margin: 15px 0px;
 }
