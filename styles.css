@@ -1,4 +1,5 @@
 #body-styling {
+    margin-top: 65px;
     background-color: #bdd5ea;
     /*background-image: url(./noisy-texture.png);*/
     font-family: 'Bree Serif', serif;
@@ -7,6 +8,7 @@
 /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 .navbar{
   border-radius: 0;
+  height: 65px;
 }
 
 .bg-custom {
