@@ -16,7 +16,8 @@
 }
 
 #col-centered{
-    padding-left: 33px;
+    /* padding-left: 33px; */
+text-align: center;
 }
 
 .column-content {
