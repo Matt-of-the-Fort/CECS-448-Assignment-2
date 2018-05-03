@@ -5,8 +5,12 @@
 }
   
 /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-.navbar {
+.navbar{
   border-radius: 0;
+}
+
+.bg-custom {
+    background-color: rgb(33, 37, 41) !important;
 }
 
 .items {
