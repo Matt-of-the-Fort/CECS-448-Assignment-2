@@ -1,0 +1,91 @@
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.icon-img
+{
+	height: 120px;
+ 	width: auto;
+}
+
+#img-gallery .row
+{
+	margin-bottom: 2%;
+}
+
+/*Change color of underline of link*/
+.category-link:hover
+{
+	color: lightgray;
+}
+
+/*When hovering img, img effects*/
+.category-img-container:hover > .category-img/*, .learn-more:hover + .category-img*/
+{
+	border-radius: 50px;
+	opacity: .75;
+}
+/*When hovering img, display 'Learn More'*/
+.category-img-container:hover > .learn-more
+{
+	opacity: 1;
+}
+
+/*Set uniform height to img's, add transitions for when hovering over category-img-container*/
+.category-img
+{
+	height: 250px;
+
+	transition: border-radius .5s ease-in-out,
+				opacity .5s ease-in-out;
+
+}
+
+/*Invisible box, displays when hovering category-img-container*/
+.learn-more
+{
+	width: 50%;
+	height: 30%;
+	/*Displays 'Learn More' over img*/
+	position: absolute;
+	left: 50%;
+	/*Change 'top' value according to size of img, to keep centered*/
+	top: 38%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.5s ease-in-out;
+
+	opacity: 0;
+	z-index: 1;
+}
+/*Center 'Learn More', style*/
+.learn-more > h4
+{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	color: Black;
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 50px;
+    text-shadow: White 1px 1px 1px;
+}
+
+.category-title
+{
+	color: gray;
+}
+
+.top-center
+{
+	position: absolute;
+	left: 50%;
+	top: -50%;
+	transform: translateX(-50%);
+}
