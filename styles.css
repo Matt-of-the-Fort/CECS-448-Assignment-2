@@ -1,7 +1,6 @@
 #body-styling {
     margin-top: 65px;
     background-color: #bdd5ea;
-    /*background-image: url(./noisy-texture.png);*/
     font-family: 'Bree Serif', serif;
     padding-top: 50px;
 }
@@ -17,19 +16,18 @@
     background-color: #ffffff;
 }
 
+.product-page-name {
+    color: black !important;
+}
+
 .column-content {
   padding: 15px 0px 3px 0px;
   text-align: center;
   color: black;
-  /*background-color: #72A7A3;*/
   background-image: url(./assets/noisy-texture.png);
-  /*border-radius: 25px;*/
-  /*border: 2px solid white;*/
 }
 
-/* Add a gray background color and some padding to the footer #d1d8d1*/
 footer {
-    /*background-color: #0A1C28;*/
     background-color: #577399;
     padding: 25px;
 }   
@@ -60,7 +58,8 @@ footer {
 
 .card-title {
     font-size: 25px;
-    color: black;
+    color: black !important;
+    margin-bottom: 5px !important;
 }
 
 .card {
@@ -73,14 +72,6 @@ footer {
     background-image: url(./assets/white_marble_2.jpg);
     background-color: #FFFFFF;
     padding: 5px;
-}
-
-#padded-right {
-    padding-right: 25px;
-}
-
-#padded-left {
-    padding-left: 25px;
 }
 
 .shop-button {
