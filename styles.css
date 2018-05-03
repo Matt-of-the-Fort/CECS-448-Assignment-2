@@ -3,13 +3,9 @@
     background-color: #bdd5ea;
     /*background-image: url(./noisy-texture.png);*/
     font-family: 'Bree Serif', serif;
+    padding-top: 50px;
 }
   
-/* Remove the navbar's default rounded borders and increase the bottom margin */ 
-.navbar{
-  border-radius: 0;
-  height: 65px;
-}
 
 .bg-custom {
     background-color: rgb(33, 37, 41) !important;

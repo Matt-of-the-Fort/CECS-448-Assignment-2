@@ -139,7 +139,8 @@ section {
 }
 
 #mainNav {
-  background-color: #212529;
+  /* background-color: #212529; */
+  background-color: rgba(21, 25, 29, 1);
 }
 
 #mainNav .navbar-toggler {
@@ -185,7 +186,7 @@ section {
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
+    background-color: rgba(21, 25, 29, 0.5);
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
