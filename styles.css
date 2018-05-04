@@ -4,7 +4,6 @@
     font-family: 'Bree Serif', serif;
     padding-top: 50px;
 }
-  
 
 .bg-custom {
     background-color: rgb(33, 37, 41) !important;
@@ -22,16 +21,21 @@
 }
 
 .column-content {
-  padding: 15px 0px 3px 0px;
-  text-align: center;
-  color: black;
-  background-image: url(./assets/noisy-texture.png);
+    padding: 15px 0px 3px 0px;
+    text-align: center;
+    color: black;
+    background-image: url(./assets/noisy-texture.png);
 }
 
 footer {
     background-color: #577399;
     padding: 25px;
-}   
+}
+
+#footer-link {
+  color: #FFFFFF;
+  margin: 0px 10px;
+}
 
 .construction{
     margin: auto;
@@ -39,10 +43,6 @@ footer {
     text-align: center;
     padding-block-start: 10%;
     padding-block-end: 25%;
-}
-
-#footer-link {
-  margin: 0px 10px;
 }
 
 .image-content {
