@@ -1,149 +1,149 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>Oasis Gate</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="main.css" rel="stylesheet">
-        <link rel="icon" href="Images/GNFLogo.png">
+<head>
+    <title>Oasis Gate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+    <link rel="icon" href="Images/GNFLogo.png">
 
-        <!-- Custom fonts for this template -->
-        <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-        
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            body {
-                color: #211E2B;
-                background-color: #bdd5ea;
-            }
-            .zoom {
-                transition: transform .2s;
-            }
+    <!-- Custom fonts for this template -->
+    <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            color: #211E2B;
+            background-color: #bdd5ea;
+        }
+
+        .zoom {
+            transition: transform .2s;
+        }
 
             .zoom:hover {
                 transform: scale(1.1);
             }
-            
-            .imageColor {
-                width: 20px;
-            }
-            
-            .btn {
-                transition: transform .1s;
-                transform: scale(1);
-            }
-            
+
+        .imageColor {
+            width: 20px;
+        }
+
+        .btn {
+            transition: transform .1s;
+            transform: scale(1);
+        }
+
             .btn:hover {
                 transition: transform .2s;
                 transform: scale(1.1);
             }
-            
-            #productImage {
-                height: 400px;
-                width: 90%;
-            }
-            
-            .btn-outline-primary {
-                color: #60aae6;
-                border: solid 1px #60aae6;
-                font-size: 0.85em;
-            }
-            
+
+        #productImage {
+            height: 400px;
+            width: 90%;
+        }
+
+        .btn-outline-primary {
+            color: #60aae6;
+            border: solid 1px #60aae6;
+            font-size: 0.85em;
+        }
+
             .btn-outline-primary:hover, .btn-outline-primary:active, .btn-primary, .btn-primary:active, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:hover {
                 background-color: #60aae6 !important;
                 border: solid 1px #60aae6 !important;
             }
-            
-            .form-control:focus {
-                border: solid 1px #60aae6;
-            }
-            
-            .btn-outline-primary:active:focus, .btn-outline-primary:focus, .form-control:focus, .btn-primary:active:focus {
-                box-shadow: 0 0 0 0 !important;
-            }
-            
-            .btn-shadow, .btn-primary:focus {
-                box-shadow: 0 0 0 0.2rem rgba(120,195,251,.4) !important;
-            }
-    
-            #mainNav {
-                background-color: #212529 !important;
-                padding-top: 15px !important;
-                padding-bottom: 15px !important;
-            }
-            
+
+        .form-control:focus {
+            border: solid 1px #60aae6;
+        }
+
+        .btn-outline-primary:active:focus, .btn-outline-primary:focus, .form-control:focus, .btn-primary:active:focus {
+            box-shadow: 0 0 0 0 !important;
+        }
+
+        .btn-shadow, .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(120,195,251,.4) !important;
+        }
+
+        #mainNav {
+            background-color: #212529 !important;
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
+
             #mainNav.navbar-shrink {
                 padding-top: 0 !important;
                 padding-bottom: 0 !important;
             }
-            
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-              font-weight: 700;
-              color: #577399 !important;
-              font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            }
-            
-            p {
-              color: #000000 !important;
-            }
 
-            .carousel-control-next-icon:after
-            {
-              content: '>';
-              font-size: 55px;
-              color: #577399;
-            }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            color: #577399 !important;
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
 
-            .carousel-control-prev-icon:after {
-              content: '<';
-              font-size: 55px;
-              color: #577399;
-            }
-            
+        p {
+            color: #000000 !important;
+        }
 
-            .page-container {
-                width: 80%;
-                margin: 0 10%;
-                padding-bottom: 1%;
-                background-color: #ffffff;
-            }
-            
-            .center-item {
-                display: flex;
-                align-items: center;
-            }
+        .carousel-control-next-icon:after {
+            content: '>';
+            font-size: 55px;
+            color: #577399;
+        }
 
-            .card-unbound {
-                height: auto;
-                width: auto;
-            }
+        .carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 55px;
+            color: #577399;
+        }
 
-            .td-valign {
-                vertical-align: middle !important;
-            }
 
-            .tr-custom-color {
-                background-color: rgba(0,0,0,.03);
-            }
+        .page-container {
+            width: 80%;
+            margin: 0 10%;
+            padding-bottom: 1%;
+            background-color: #ffffff;
+        }
 
-            .container-padded {
-                padding-top: 7%;
-            }
+        .center-item {
+            display: flex;
+            align-items: center;
+        }
 
-        </style>
-    </head>
+        .card-unbound {
+            height: auto;
+            width: auto;
+        }
+
+        .td-valign {
+            vertical-align: middle !important;
+        }
+
+        .tr-custom-color {
+            background-color: rgba(0,0,0,.03);
+        }
+
+        .container-padded {
+            padding-top: 7%;
+        }
+    </style>
+</head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container-fluid">

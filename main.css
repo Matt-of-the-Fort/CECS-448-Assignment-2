@@ -292,4 +292,10 @@ section {
 footer {
   padding: 50px 0px;
   background-color: #212529;
+  font-family: 'Bree Serif', serif;
+}
+
+#footer-link {
+    color: #ffffff;
+    margin: 0 10px;
 }
