@@ -68,6 +68,20 @@
                 background-color: #ffffff;
             }
             
+            .center-item {
+                display: flex;
+                align-items: center;
+            }
+
+            .card-unbound {
+                height: auto;
+                width: auto;
+            }
+
+            .td-valign {
+                vertical-align: middle !important;
+            }
+
         </style>
     </head>
     <body>
@@ -92,7 +106,7 @@
                     <div class="col-sm-7">
                         <h3>Oasis Gate</h3>
                         <hr>
-                        <h5>Price: $<span id="price" class="h3">1620</span> plus shipping</h5>
+                        <h5>Price: $<span id="price" class="h3">1620</span> + shipping</h5>
                         <button id="Gsingle" type="button" class="btn btn-outline-primary m-2" onclick="oasisSg()">Walk Gate - Oasis -- Single</button>
                         <button id="Gdouble" type="button" class="btn btn-outline-primary m-2" onclick="oasisDb()">Walk Gate - Oasis -- Double</button>
                         <button id="Psingle" type="button" class="btn btn-outline-primary m-2" onclick="plexiSg()">Privacy Panel Plexiglas Single</button>
@@ -137,7 +151,7 @@
                             }
                             function total() {
                                 var selected = document.getElementById("sel1");
-                                document.getElementById("total").innerHTML = (selected.options[selected.selectedIndex].value * document.getElementById("price").innerHTML);
+                                document.getElementById("total").innerHTML = '$' + (selected.options[selected.selectedIndex].value * document.getElementById("price").innerHTML);
                             }
                             function color(color) {
                                 document.getElementById("color").innerHTML = color;
@@ -181,78 +195,123 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-3">
-                                <h6>Qty: </h6>
-                                <select class="form-control" id="sel1" onchange="total()">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                </select>
+                            <div class="col">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Color</th>
+                                            <th scope="col">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody">
+                                        <tr>
+                                            <td class="td-valign">
+                                                <select class="form-control" id="sel1" onchange="total()">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                </select>
+                                            </td>
+                                            <td class="td-valign">
+                                                <h5 id="color"></h5>
+                                            </td>
+                                            <td class="td-valign">
+                                                <span id="total" class="h4"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="col-3">
-                                <h6>Color: <h5 id="color"></h5></h6>
-                            </div>
-                            <div class="col-3">
-                                <h6>Total: $<span id="total" class="h4"></span></h6>
-                            </div>
-                            <div class="col-3">
-                                <button type="button" class="btn btn-primary" onclick="add()">Add to Cart</button>
-                                <h6 id="added" class="p-2"></h6>
+                            <div class="col-3 center-item" align="center">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <button type="button" class="btn btn-primary" onclick="add()">Add to Cart</button>
+                                    </div>
+                                    <div class="row">
+                                        <h6 id="added" class="p-2"></h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-10">
-                        <h2>Product Description</h2>
-                        <p>This Gate the outer frame is 2" X 2" with the hinge side been .187 and the rest .125, Top and bottom horizontal ( arch ) 
-                            are 1" X 2" X .125, the pickets are 3/4" X 3/4" x .125 with slip in collars, bottom and crown scroll work is solid plate 3/8 
-                            X 3/4", Lock box and locks are optional our standard lock that is included is a gravity Gate latch which is Stainless 
-                            steel. Posts depends on what's needed if is to be atached to an existing structure a 2" X 2" can we will provide the 
-                            correct size and hardware for you.</p>
-                        <p>The backing Material use on this particular gate is Krinklglas.
-                            The newest and most versatile stained glass applications are not really glass at all, but rather a Fiberglass Reinforced 
-                            Plastic (FRP) Copolymer Panel known as Krinklglas®.
-                            Privacy and Security: Krinklglas® translucent panels let light through without glare, yet provide a special privacy and 
-                            extra visual protection not available with transparent materials.
-                            Low Maintenance: Chemical and abrasion resistant to most acids, mild alkalies and petroleum-based solvents, 
-                            Krinklglas® can be used in most corrosive environments. Its textured surfaces "hide" scratches and marks from 
-                            knives and other sharp objects; the panels are easily cleaned of dirt and graffiti using ordinary cleaners or common 
-                            solvents.</p>
-                        <p>Warranty: Krinklglas panels are custom made with quality materials and UV inhibitors. Panels are warranted against 
-                            manufacturing defects. Product is warranted against severe color fading for five years from date of purchase.
-                            For security and privacy in your home, choose an attractive Custom Privacy driveway gate from the wide selection 
-                            available on our web site. A driveway gate is not only a great source of privacy and security, but it adds loads of curb 
-                            appeal to your home. The exterior impression of your property becomes more authoritative and majestic with a gate. If 
-                            you have one-of-a-kind landscaping, then this gate will make one of a kind Privacy Driveway Gate.</p>
-                        <p>We recommend Aluminum as the Metal for your Garden Gates or Walk Through Gates. Aluminum has many features - 
-                            Aluminum will NEVER RUST!  Authentic Look of Cast Iron - Without the bulky weight and maintenance. Strong Solid 
-                            Structural Grade ½” to ¾” Cast Aluminum Ornamentation NOT cheap hollow tubing like most others.</p>
-                        <p>Just as a well-chosen front door delivers a message about the homeowner, garden gates convey a lot of information as 
-                            well. With garden gates, you have the opportunity to make a statement. For instance, a bright eye-catching color 
-                            demands attention. Garden gates made of pickets or wrought iron reflect a certain openness and willingness to share, 
-                            say, giving passersby a peek at an outdoor water fountain just on the other side. Solid garden gates, conversely, indicate 
-                            a desire for privacy and security that is why we offer all the different styles.</p>
-                        <p>We offer top quality garden gates that will create a charming and beautiful facade to your garden and will instantly 
-                            upgrade it. You can choose between elegant wrought iron gates with a classic look or opt  for a traditional or modern design.</p>
-                        <p>A good fence relies on hinges, latches and other hardware to keep it working in a smooth and orderly fashion. With so 
-                            many options available, getting the right piece of hardware for your fence is key to longevity and overall performance, we 
-                            only use the best material available our hinges for the garden gates are made of aluminum and they will be painted with 
-                            the gate ( powder coat oven baked ) the pin, springs, screws and if you select the gravity gate latch are all STAINLESS STEEL</p>
-                        <p>Ornamental fencing adds unique decor with a personalized touch while simultaneously providing protection for either 
-                            your home or business. OUR Iron Gates are manufactured from steel, or from extruded Aluminum. They are designed to 
-                            provide years of maintenance-free operation. Gate hinges and hardware have been engineered to withstand the rigors of 
-                            manual or automatic gate opening. A powder-coat finish provides superior corrosion resistance, while also making the 
-                            gate virtually maintenance-free. Choose from a complete selection of styles, options, and colors available from no other manufacturer</p>
+                    <div class="card card-unbound">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Product Description</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Related products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                With supporting text below as a natural lead-in to additional content.This Gate the outer frame is 2" X 2" with the hinge side been .187 and the rest .125, Top and bottom horizontal ( arch )
+                                are 1" X 2" X .125, the pickets are 3/4" X 3/4" x .125 with slip in collars, bottom and crown scroll work is solid plate 3/8
+                                X 3/4", Lock box and locks are optional our standard lock that is included is a gravity Gate latch which is Stainless
+                                steel. Posts depends on what's needed if is to be atached to an existing structure a 2" X 2" can we will provide the
+                                correct size and hardware for you.
+                            </p>
+                            <p class="card-text">
+                                The backing Material use on this particular gate is Krinklglas.
+                                The newest and most versatile stained glass applications are not really glass at all, but rather a Fiberglass Reinforced
+                                Plastic (FRP) Copolymer Panel known as Krinklglas®.
+                                Privacy and Security: Krinklglas® translucent panels let light through without glare, yet provide a special privacy and
+                                extra visual protection not available with transparent materials.
+                                Low Maintenance: Chemical and abrasion resistant to most acids, mild alkalies and petroleum-based solvents,
+                                Krinklglas® can be used in most corrosive environments. Its textured surfaces "hide" scratches and marks from
+                                knives and other sharp objects; the panels are easily cleaned of dirt and graffiti using ordinary cleaners or common
+                                solvents.
+                            </p>
+                            <p class="card-text">
+                                Warranty: Krinklglas panels are custom made with quality materials and UV inhibitors. Panels are warranted against
+                                manufacturing defects. Product is warranted against severe color fading for five years from date of purchase.
+                                For security and privacy in your home, choose an attractive Custom Privacy driveway gate from the wide selection
+                                available on our web site. A driveway gate is not only a great source of privacy and security, but it adds loads of curb
+                                appeal to your home. The exterior impression of your property becomes more authoritative and majestic with a gate. If
+                                you have one-of-a-kind landscaping, then this gate will make one of a kind Privacy Driveway Gate.
+                            </p>
+                            <p class="card-text">
+                                We recommend Aluminum as the Metal for your Garden Gates or Walk Through Gates. Aluminum has many features -
+                                Aluminum will NEVER RUST!  Authentic Look of Cast Iron - Without the bulky weight and maintenance. Strong Solid
+                                Structural Grade ½” to ¾” Cast Aluminum Ornamentation NOT cheap hollow tubing like most others.
+                            </p>
+                            <p class="card-text">
+                                Just as a well-chosen front door delivers a message about the homeowner, garden gates convey a lot of information as
+                                well. With garden gates, you have the opportunity to make a statement. For instance, a bright eye-catching color
+                                demands attention. Garden gates made of pickets or wrought iron reflect a certain openness and willingness to share,
+                                say, giving passersby a peek at an outdoor water fountain just on the other side. Solid garden gates, conversely, indicate
+                                a desire for privacy and security that is why we offer all the different styles.
+                            </p>
+                            <p class="card-text">
+                                We offer top quality garden gates that will create a charming and beautiful facade to your garden and will instantly
+                                upgrade it. You can choose between elegant wrought iron gates with a classic look or opt  for a traditional or modern design.
+                            </p>
+                            <p class="card-text">
+                                A good fence relies on hinges, latches and other hardware to keep it working in a smooth and orderly fashion. With so
+                                many options available, getting the right piece of hardware for your fence is key to longevity and overall performance, we
+                                only use the best material available our hinges for the garden gates are made of aluminum and they will be painted with
+                                the gate ( powder coat oven baked ) the pin, springs, screws and if you select the gravity gate latch are all STAINLESS STEEL
+                            </p>
+                            <p class="card-text"
+                                Ornamental fencing adds unique decor with a personalized touch while simultaneously providing protection for either
+                                your home or business. OUR Iron Gates are manufactured from steel, or from extruded Aluminum. They are designed to
+                                provide years of maintenance-free operation. Gate hinges and hardware have been engineered to withstand the rigors of
+                                manual or automatic gate opening. A powder-coat finish provides superior corrosion resistance, while also making the
+                                gate virtually maintenance-free. Choose from a complete selection of styles, options, and colors available from no other manufacturer
+                            </p>
+                        </div>
+                    </div>
                     </div>
                     <div class="col-1"></div>
                 </div>
