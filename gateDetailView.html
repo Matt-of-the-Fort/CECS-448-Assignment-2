@@ -5,6 +5,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="main.css" rel="stylesheet">
+        <link rel="icon" href="Images/GNFLogo.png">
+
+        <!-- Custom fonts for this template -->
+        <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        
         <link rel="stylesheet" href="styles.css">
         <style>
             body {
@@ -39,18 +51,18 @@
             }
             
             .btn-outline-primary {
-                color: #BD7248;
-                border: solid 1px #BD7248;
+                color: #60aae6;
+                border: solid 1px #60aae6;
                 font-size: 0.85em;
             }
             
-            .btn-outline-primary:hover, .btn-outline-primary:active, .btn-primary {
-                background-color: #BD7248 !important;
-                border: solid 1px #BD7248 !important;
+            .btn-outline-primary:hover, .btn-outline-primary:active, .btn-primary, .btn-primary:active, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:hover {
+                background-color: #60aae6 !important;
+                border: solid 1px #60aae6 !important;
             }
             
             .form-control:focus {
-                border: solid 1px #BD7248;
+                border: solid 1px #60aae6;
             }
             
             .btn-outline-primary:active:focus, .btn-outline-primary:focus, .form-control:focus, .btn-primary:active:focus {
@@ -58,8 +70,48 @@
             }
             
             .btn-shadow, .btn-primary:focus {
-                box-shadow: 0 0 0 0.2rem rgba(189,114,72,.4) !important;
+                box-shadow: 0 0 0 0.2rem rgba(120,195,251,.4) !important;
             }
+    
+            #mainNav {
+                background-color: #212529 !important;
+                padding-top: 15px !important;
+                padding-bottom: 15px !important;
+            }
+            
+            #mainNav.navbar-shrink {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              font-weight: 700;
+              color: #577399 !important;
+              font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            }
+            
+            p {
+              color: #000000 !important;
+            }
+
+            .carousel-control-next-icon:after
+            {
+              content: '>';
+              font-size: 55px;
+              color: #577399;
+            }
+
+            .carousel-control-prev-icon:after {
+              content: '<';
+              font-size: 55px;
+              color: #577399;
+            }
+            
 
             .page-container {
                 width: 80%;
@@ -86,10 +138,129 @@
                 background-color: rgba(0,0,0,.03);
             }
 
+            .container-padded {
+                padding-top: 7%;
+            }
+
         </style>
     </head>
     <body>
-        <div class="page-container">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#page-top"><img src="Images/GNFLogo.png" class="my-brand"> GatesNFences</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li class="dropdown-submenu" href="#"><a class="dropdown-item dropdown-toggle" href="#">Driveway Gates</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Modern Driveway Gates</a></li>
+                          <li><a class="dropdown-item" href="#">Custom Driveway Gates</a></li>
+                          <li><a class="dropdown-item" href="#">Privacy Driveway Gates</a></li>
+                        </ul>               
+                      </li>
+                      <li class="dropdown-submenu" href="#"><a class="dropdown-item dropdown-toggle" href="#">Garden Gates</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Modern Garden Gates</a></li>
+                          <li><a class="dropdown-item" href="#">Privacy Garden Gates</a></li>
+                        </ul>                 
+                      </li>
+                      <li class="dropdown-submenu" href="#"><a class="dropdown-item dropdown-toggle" href="#">Fencing</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Fencing 2</a></li>
+                        </ul>                 
+                      </li>
+                      <li class="dropdown-submenu" href="#"><a class="dropdown-item dropdown-toggle" href="#">Railings</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Modern Balcony Railings</a></li>
+                        </ul>                 
+                      </li>                           
+                      <li class="dropdown-submenu" href="#"><a class="dropdown-item dropdown-toggle" href="#">Openers - Operators</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Ramset</a></li>
+                          <li><a class="dropdown-item" href="#">FAAC</a></li>
+                          <li><a class="dropdown-item" href="#">Apollo</a></li>
+                          <li><a class="dropdown-item" href="#">BFT</a></li>
+                          <li><a class="dropdown-item" href="#">Power Master</a></li>
+                          <li><a class="dropdown-item" href="#">Platinum Gate Openers</a></li>
+                          <li><a class="dropdown-item" href="#">Liftmaster</a></li>
+                          <li><a class="dropdown-item" href="#">Elite</a></li>
+                          <li><a class="dropdown-item" href="#">Doorking</a></li>
+                          <li><a class="dropdown-item" href="#">OSCO</a></li>
+                          <li><a class="dropdown-item" href="#">Allstar</a></li>
+                          <li><a class="dropdown-item" href="#">Viking</a></li>
+                          <li><a class="dropdown-item" href="#">Eagle</a></li>
+                          <li><a class="dropdown-item" href="#">SEA</a></li>
+                          <li><a class="dropdown-item" href="#">Hysecurity</a></li>
+                        </ul>                 
+                      </li>
+                      <a class="dropdown-item" href="#">Main Control Boards</a>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Remote Controls</a><ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Multi-Code</a></li>
+                          <li><a class="dropdown-item" href="#">Transmitter Solutions</a></li>
+                          <li><a class="dropdown-item" href="#">Linear</a></li>
+                          <li><a class="dropdown-item" href="#">Liftmaster</a></li>
+                          <li><a class="dropdown-item" href="#">Doorking</a></li>
+                          <li><a class="dropdown-item" href="#">Keystron - Heddolf</a></li>
+                          <li><a class="dropdown-item" href="#">BFT - SEA - FAAC</a></li>
+                          <li><a class="dropdown-item" href="#">Long Range</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Recievers</a><ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Linear / Multi-Code</a></li>
+                          <li><a class="dropdown-item" href="#">Doorking</a></li>
+                          <li><a class="dropdown-item" href="#">Liftmaster</a></li>
+                          <li><a class="dropdown-item" href="#">Keystron - Heddolf</a></li>
+                          <li><a class="dropdown-item" href="#">Long Range</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Telephone Entry</a><ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Select Engineering</a></li>
+                          <li><a class="dropdown-item" href="#">American Access System</a></li>
+                          <li><a class="dropdown-item" href="#">Doorking</a></li>                      
+                          <li><a class="dropdown-item" href="#">Liftmaster</a></li>
+                          <li><a class="dropdown-item" href="#">Sentex</a></li>
+                          <li><a class="dropdown-item" href="#">Elite</a></li>
+                          <li><a class="dropdown-item" href="#">Linear</a></li>
+                          <li><a class="dropdown-item" href="#">IP Voice Over Internet</a></li>
+                          <li><a class="dropdown-item" href="#">Readers</a></li>
+                          <li><a class="dropdown-item" href="#">Keypads</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Safety Equipment</a><ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Safety Loops</a></li>
+                          <li><a class="dropdown-item" href="#">Loop Detector </a></li>
+                          <li><a class="dropdown-item" href="#">Safety Photo Cell</a></li>                      
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Gate Accessories</a><ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Cantilever Wheels</a></li>
+                          <li><a class="dropdown-item" href="#">VTrack-Guide-VWheels</a></li>
+                          <li><a class="dropdown-item" href="#">Hinges</a></li>                      
+                        </ul>
+                      </li>
+                      <a class="dropdown-item" href="#">Locks-Latches</a>
+                    </ul>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li> 
+                  <li class="nav-item"><a class="nav-link" href="#contactUs">Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ourPolicies">Our Policies</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#manufacturers">Manufacturers</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+
+        <div class="page-container container-padded">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-1">
